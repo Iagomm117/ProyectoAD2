@@ -45,7 +45,8 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 
 ### Base de Datos. Modelo Entidad-Relación
 
-<img width="1090" height="767" alt="image" src="https://github.com/user-attachments/assets/3956204f-0055-4782-8b47-a2f8b05b30ea" />
+<img width="1007" height="773" alt="image" src="https://github.com/user-attachments/assets/1bea624f-b5a8-4bb7-a405-d49817cc3121" />
+
 
 
 #### Tabla Artistas
@@ -60,7 +61,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Genero         | VARCHAR(20)  | Género de música del artista                  |
 | Nacionalidad   | VARCHAR(20)  | País de origen                                |
 | Imagen         | VARCHAR(200) | Imagen del artista                            |
-| ID_Genero      | INT (FK)     | Identificador único del genero                |
+| Genero      | VARCHAR(20)     | Identificador del genero                      |
 
 #### Tabla Canción
 | Campo          | Tipo de dato | Descripción                          |
@@ -73,7 +74,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Artistas       | VARCHAR(130) | Artistas que participan en la canción|
 | Imagen         | VARCHAR(200) | Imagen de la canción                 |
 | Duración       | INT          | Duración total de la  canción        |
-| ID_Genero      | INT (FK)     | Identificador único del genero       |
+| ID_Genero      | VARCHAR(20)  | Identificador  del genero       |
 
 #### Tabla Álbum
 | Campo             | Tipo de dato  | Descripción                        |
@@ -87,7 +88,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Cantidad_Canciones| INT           | Cantidad de canciones del álbum    |
 | Imagen            | VARCHAR(200)  | Imagen del álbum                   |
 | Duración          | INT           | Duración total del álbum           |
-| ID_Genero         | INT (FK)     | Identificador único del genero      |
+| Genero            | VARCHAR(20)   | Identificador único del genero     |
 
 #### Tabla Género
 
@@ -100,7 +101,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Campo          | Tipo de dato | Descripción                     |
 |----------------|--------------|---------------------------------|
 | ID             | INT (PK)     | Identificador único del artista |
-| Nombre         | VARCHAR(50) | Nombre de usuario               |
+| Nombre         | VARCHAR(50)  | Nombre de usuario               |
 | Contraseña     | VARCHAR(30)  | Contraseña del usuario          |
 | masReproducido | VARCHAR(30)  | Artista favorito                |
 
@@ -109,12 +110,10 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Campo          | Tipo de dato | Descripción                                   |
 |----------------|--------------|-----------------------------------------------|             
 | ID             | INT (PK)     | Identificador único del artista               |
-| Nombre         | VARCHAR(20)  | Nombre del artista                            |
-| Narradores     | DOUBLE       | Reproducciones mensuales del artista          |
-| Album          | VARCHAR(80)  | Nombre del álbum al cual pertenece la canción |
+| Nombre         | VARCHAR(50)  | Nombre del artista                            |
+| Narradores     | varchar(130) | Reproducciones mensuales del artista          |
 | Genero         | VARCHAR(20)  | Género de música del artista                  |
-| Oyentes        | VARCHAR(20)  | País de origen                                |
-| ID_Genero      | INT (FK)     | Identificador único del genero                |
+| Oyentes        | INT          | País de origen                                |
 
 ### Estructura
 El proyecto está planteado segun la estructura Modelo, Vista, Controlador.
@@ -380,4 +379,4 @@ Con la creación de este proyecto hemos podido aprender a realizar consultas má
 ## Autores
 
 Nicolás Sanjuás Casal [@nico](https://github.com/Nicosanju)  
-Iago Mariño Mota @
+Iago Mariño Mota [@iago](https://github.com/Iagomm117)
