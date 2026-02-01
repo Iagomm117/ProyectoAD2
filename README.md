@@ -10,6 +10,7 @@
     - [Tabla Álbum](#tabla-álbum)
     - [Tabla Género](#tabla-género)
     - [Tabla Usuario](#tabla-usuario)
+    - [Tabla Podcast](#tabla-podcast)
   - [Estructura](#estructura)
   - [Metodología](#metodología)
   - [Configuracion de Ant](#configuración-de-ant)
@@ -44,7 +45,11 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 
 ### Base de Datos. Modelo Entidad-Relación
 
+<img width="1090" height="767" alt="image" src="https://github.com/user-attachments/assets/3956204f-0055-4782-8b47-a2f8b05b30ea" />
+
+
 #### Tabla Artistas
+
 | Campo          | Tipo de dato | Descripción                                   |
 |----------------|--------------|-----------------------------------------------|             
 | ID             | INT (PK)     | Identificador único del artista               |
@@ -55,6 +60,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Genero         | VARCHAR(20)  | Género de música del artista                  |
 | Nacionalidad   | VARCHAR(20)  | País de origen                                |
 | Imagen         | VARCHAR(200) | Imagen del artista                            |
+| ID_Genero      | INT (FK)     | Identificador único del genero                |
 
 #### Tabla Canción
 | Campo          | Tipo de dato | Descripción                          |
@@ -67,6 +73,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Artistas       | VARCHAR(130) | Artistas que participan en la canción|
 | Imagen         | VARCHAR(200) | Imagen de la canción                 |
 | Duración       | INT          | Duración total de la  canción        |
+| ID_Genero      | INT (FK)     | Identificador único del genero       |
 
 #### Tabla Álbum
 | Campo             | Tipo de dato  | Descripción                        |
@@ -80,6 +87,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Cantidad_Canciones| INT           | Cantidad de canciones del álbum    |
 | Imagen            | VARCHAR(200)  | Imagen del álbum                   |
 | Duración          | INT           | Duración total del álbum           |
+| ID_Genero         | INT (FK)     | Identificador único del genero      |
 
 #### Tabla Género
 
@@ -96,15 +104,39 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Contraseña     | VARCHAR(30)  | Contraseña del usuario          |
 | masReproducido | VARCHAR(30)  | Artista favorito                |
 
+#### Tabla Podcast
+
+| Campo          | Tipo de dato | Descripción                                   |
+|----------------|--------------|-----------------------------------------------|             
+| ID             | INT (PK)     | Identificador único del artista               |
+| Nombre         | VARCHAR(20)  | Nombre del artista                            |
+| Narradores     | DOUBLE       | Reproducciones mensuales del artista          |
+| Album          | VARCHAR(80)  | Nombre del álbum al cual pertenece la canción |
+| Genero         | VARCHAR(20)  | Género de música del artista                  |
+| Oyentes        | VARCHAR(20)  | País de origen                                |
+| ID_Genero      | INT (FK)     | Identificador único del genero                |
 
 ### Estructura
 El proyecto está planteado segun la estructura Modelo, Vista, Controlador.
 
+<img width="331" height="640" alt="image" src="https://github.com/user-attachments/assets/582d2cea-9adc-473d-b93c-732d43d88683" />
+
+
 #### Modelo
+
+En el modelo crearíamos las clases para los pojos, más un RenderTabla, para personalizar las tablas a nuestro antojo
 
 #### Vista
 
+En las vistas tendriamos:la pantalla principal, la de inicio de sesion, la de registro, la de información de albumes y canciones(utilizamos el mismo JDialog), la de añadir cancion y la de información de canción.
+
 #### Controlador
+
+Y el controlador serviría para gestionar de manera eficiente todas estas vistas mencionadas anteriormente, separando un controller para la información de albumes y otro para la de canciones a pesar de utilizar el mismo JDialog para las dos.
+
+#### Main
+
+Aquí tendríamos la clase principal para ejecutar el programa y también la clase OperacionsDB para todas las consultas que le hicieramos a la base de datos
 
 ### Metodología
 
@@ -315,6 +347,8 @@ Nico realizaría la parte gráfica de las interfaces junto a la gestión de usua
 
 En cuanto a Iago, se encargaría de la inserción de todos los datos, como de la descarga de la totalidad de las imágenes, y parte de las canciones, y se encargaría, en mayor parte que Nico en realizar la lógica del programa,crearía parte del script de creacón de las tablas, y por último, también crearía el modelo entidad-relación para insertar en el Readme.
 
+En cuanto a las horas trabajadas serían mas o menos las mismas ya que lo que no trabajamos en clase lo realizamos en llamada los dos, así que podrían  ser aproximadamente unas 35 horas aproximadamente.
+
 
 [Volver al índice](#índice)
 ## Mejoras
@@ -331,6 +365,17 @@ En cuanto a posibles mejoras en un futuro comentamos las siguientes:
 ```
 [Volver al índice](#índice)
 ## Conclusiones
+
+En cuanto a las horas trabajadas serían mas o menos las mismas ya que lo que no trabajamos en clase lo realizamos en llamada los dos, así que podrían  ser aproximadamente unas 35 horas aproximadamente.
+
+Consideramos que nuestro programa cumple con todos los requisitos que se solicitan, ya que conseguimos conectarnos a la BBDD de manera completamente satisfactoria. También nos permite tanto ver información detallada, como crear o eliminar registros.
+Para los usuarios utilizamos un un registro e inicio de sesion en el cual se guardan las acciones que vayan haciendo de manera individualizada
+
+El acceso a las diferentes pantallas y la navegación entre ellas es fácil e intuitivo, tanto así el acceso a los diferentes botones,que expresan de manera coherente lo que hace cada uno
+
+Con la creación de este proyecto hemos podido aprender a realizar consultas más complejas dentro de la base de datos para sacar información más detallada, como así también a manejar otro tipo de archivos como son los .mp3(para las canciones) o también la introducción de imágenes dentro de la BBDD.
+
+
 [Volver al índice](#índice)
 ## Autores
 
