@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.10.14
+Created-By: 25.0.1+8-LTS (Azul Systems, Inc.)
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: proyecto2_ad.Proyecto2_AD
+
