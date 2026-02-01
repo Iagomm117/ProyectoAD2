@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import proyecto2_ad.OperacionsDB;
 import view.NuevaCancionJDialog;
 
@@ -28,7 +29,9 @@ public class NuevaCancionController {
                     String nombre = view.getTextCancionTextField();
                     String album = view.getTextAlbumTextField();
                     int duracion = view.getIntDuracionSpinner();
+                    JOptionPane.showMessageDialog(view, "Canción creada correctamente");
                     OperacionsDB.engadirCancion(nombre, artista, album, duracion);
+                    
                 } catch (SQLException ex) {
                     System.getLogger(NuevaCancionController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
                 }

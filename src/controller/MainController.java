@@ -77,6 +77,10 @@ public class MainController {
                 main.setVisible(true);
                 view.dispose();
                 break;
+            }else{
+                view.getNombreInicioSesionTextField().setText("");
+                view.getContraseñaInicioSesionTextField().setText("");
+            
             }
 
         }
