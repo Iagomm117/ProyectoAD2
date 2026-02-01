@@ -16,8 +16,9 @@
   - [Ejecución del proyecto](#ejecución-del-proyecto)
   - [Manejo de errores](#manejo-de-errores)
 - [Manual de usuario](#manual-de-usuario)
-  - [Registro](#registro)
+  - [Registro e Inicio de Sesión](#registro-e-inicio-de-sesión)
   - [Busquedas](#busquedas)
+  - [Consultar información](#consultar-información)
   - [Otras opciones (Borrar y añadir canción)](#otras-opciones-borrar-y-añadir-canción)
 - [Reparto de tareas](#reparto-de-tareas)
 - [Mejoras](#mejoras)
@@ -142,13 +143,14 @@ Gracias a este flujo de trabajo nos permite trabajar varios desarrolladores simu
   
   2.Asegurarse de de que el mysql-connector-j-8.1.0.jar este ya implementado en las librerias.
   
-  3.Ejecutar el método bien para poder iniciar la aplicación
+  3.Ejecutar el método *Main* para poder iniciar la aplicación
+
   ````
 ### Manejo de errores
 Para este proyecto hemos usado los try catch para controlar las posibles excepciones que puedan salir en el manejo de la aplicación.
 ## Manual de usuario
 [Volver al índice](#índice)
-### Registro
+### Registro e Inicio de Sesión:
 Al abrir la aplicación, el usuario en cuestión verá la siguiente pantalla :
 
 <img width="451" height="627" alt="image" src="https://github.com/user-attachments/assets/1b5af970-3170-4f08-8382-4949ee75a990" />
@@ -186,23 +188,146 @@ Una vez que se validen los datos aparecerá esto:
 <img width="460" height="537" alt="image" src="https://github.com/user-attachments/assets/d38261c7-ed69-4460-a91c-60fbeb6b9b4a" />
 
 
-Y a continuacion ya accederíamos a la pantalla principal:
+Y a continuacion ya accederíamos a la pantalla principal, donde nos aparecerá por defecto marcado el artista favorito que escogimos en el registro:
 
-<img width="876" height="532" alt="image" src="https://github.com/user-attachments/assets/398a5dda-2c4e-433d-a2eb-040c67c28f8d" />
+<img width="878" height="537" alt="image" src="https://github.com/user-attachments/assets/94f856bc-085f-4e9c-a9d6-f1a8fad1d05e" />
+
 
 
 ### Busquedas
 
+Una vez que estamos en la pantalla principal podremos acceder a las diferentes funcionalidades:
+
+La primera será la opción del filtro de búsqueda por artista, la cual no hace distinción de mayúsculas y minúsculas
+
+Como vemos si ponemos la letra correspondientes nos mostrará los datos de todos los artistas que contengan esa letra al darle a *Buscar*:
+
+<img width="892" height="540" alt="image" src="https://github.com/user-attachments/assets/49df68f8-0ec1-4a5c-b8be-bd71b4c2988b" />
+
+Como así buscaríamos uno en concreto(por ejemplo Melendi):
+
+<img width="888" height="538" alt="image" src="https://github.com/user-attachments/assets/ddad379c-9a33-4a88-afd0-9f60b8bdd674" />
+
+Si lo dejamos en blanco y le damos a *Buscar* otra vez, reaparecerían todos los artistas otra vez:
+
+<img width="876" height="536" alt="image" src="https://github.com/user-attachments/assets/03df2b41-1da3-4993-b1d0-648c1c03b5c6" />
+
+
+### Consultar información
+
+#### Información de artista
+      
+Para poder consultar de forma individualizada la información del artista tendremos un *MouseListener* para que al pulsar  en la casilla del nombre del artista nos aparezca su información detallada.     
+
+Si pulsamos en Rosalía, aparecerá esto:
+``` 
+-Género
+-Nombre del artista
+-Nacionalidad,reproducciones mensuales
+-Tabla con :
+  -Imagen de la canción
+  -Álbum al que pertenece
+  -Nombre de la canción
+  -Botón de reproduccion
+```
+<img width="832" height="530" alt="image" src="https://github.com/user-attachments/assets/e5da5286-4c56-408b-a8a5-da500d77b426" />
+
+En caso de que se pulse en la casilla de la canción, podremos ver la información de la canción en cuestión, que sería:
+
+``` 
+-Imagen de la canción
+-Nombre de la canción
+-Nombre del artista
+-Duración de la canción
+-Reproducciones totales
+```
+
+<img width="587" height="491" alt="image" src="https://github.com/user-attachments/assets/f1379d2d-d0c5-4a20-8299-83ef7ef2b3c4" />
+
+Y si queremos reproducir la canción en cuestión le daremos a play, donde cambiará el icono si se está reproduciendo, y se volverá a poner igual cuando acabe la canción:
+
+<img width="998" height="536" alt="image" src="https://github.com/user-attachments/assets/1f9ffdf5-bc30-4e1b-b76e-ca5f9262bb49" />
+
+#### Información de álbum
+
+Tendrá la misma funcionalidad que el *MouseListener* de artista,pero ahora enseñando la información detallada de los álbumes, que tendrá la misma estructura, pero enseñará el número de canciones que tiene el álbum y la duración del mismo:
+
+<img width="815" height="532" alt="image" src="https://github.com/user-attachments/assets/5727e8f4-83d4-4c3a-9c12-c998590b31ab" />
+
+En cuanto a la infomación de la canción vendría siendo lo mismo que en el apartado canción:
+
+<img width="350" height="356" alt="image" src="https://github.com/user-attachments/assets/d9f2306b-93ca-4e83-8cc3-a801a3cc1481" />
+
+Y cuando reproduces una de las canciones del álbum también tendría la misma funcionalidad:
+
+<img width="956" height="530" alt="image" src="https://github.com/user-attachments/assets/92b97f86-9bcb-4439-9357-95a79e1cc56d" />
+
 ### Otras opciones (Borrar y añadir canción)
 
+#### Añadir canción 
+
+Para poder añadir una canción tendríamos que pulsar en el artista donde se quiera añadir la canción(en este caso esocogí Rels b), y pulsar *Añadir Cancion*:
+
+<img width="770" height="532" alt="image" src="https://github.com/user-attachments/assets/a61d296a-7740-4bd8-b8e3-67219665c817" />
+
+Se abrirá esta ventana, donde le meteremos:
+
+```
+-Nombre de la canción
+-Álbum al que pertenecerá
+-Duración de la canción
+
+```
+
+<img width="411" height="305" alt="image" src="https://github.com/user-attachments/assets/e8137c22-b793-4ffd-b90d-57bfc98dae74" />
+
+Una vez guardado nos pondrá esto:
+
+<img width="402" height="318" alt="image" src="https://github.com/user-attachments/assets/7d014fa4-9775-42b2-83a7-e21edc477da0" />
+
+Y ya aparecería la canción en la pantalla:
+
+<img width="738" height="538" alt="image" src="https://github.com/user-attachments/assets/fbdedbc2-9708-45b1-ab05-715eb2039485" />
+
+#### Borrar canción
+
+En caso de querer borrar una canción tendremos que acceder al apartado de artisa y pulsar en uno, y una vez accedido pulsar en la canción que se quiera eliminar:
+
+<img width="742" height="532" alt="image" src="https://github.com/user-attachments/assets/19d976cd-635d-4c60-b4de-1366d83b1cc1" />
+
+Una vez ahí, le daremos a *Borrar Cancion*:
+
+<img width="742" height="532" alt="image" src="https://github.com/user-attachments/assets/ae894533-ceed-4982-a127-8d0c13a46874" />
+
+Cuando le demos nos aparecerá este aviso:
+
+<img width="513" height="323" alt="image" src="https://github.com/user-attachments/assets/9fddb542-e7c5-4615-b13d-524892157ac6" />
+
+Y si le damos a *SI* ya no aparecerá la canción:
+
+<img width="750" height="523" alt="image" src="https://github.com/user-attachments/assets/e29dba4a-c264-403c-89c4-ea082133d65b" />
+
 ## Reparto de tareas
+
+En cuanto al reparto de las tareas, haríamos el siguiente reparto:
+
+Nico realizaría la parte gráfica de las interfaces junto a la gestión de usuarios, como también descargaría parte de las canciones a reproducir en el programa, y crearía parte del script de creacón de las tablas, realizaría parte de la lógica del programa pero en menor parte que Iago, y por último realizaría el readme.
+
+En cuanto a Iago, se encargaría de la inserción de todos los datos, como de la descarga de la totalidad de las imágenes, y parte de las canciones, y se encargaría, en mayor parte que Nico en realizar la lógica del programa,crearía parte del script de creacón de las tablas, y por último, también crearía el modelo entidad-relación para insertar en el Readme.
+
+
 [Volver al índice](#índice)
 ## Mejoras
 En cuanto a posibles mejoras en un futuro comentamos las siguientes:
 ```
-1.Introducción de información de podcasts.
+1.Información sobre podcasts.
 
 2.Búsqueda a tiempo real por tecla pulsada.
+
+3.Creación de un álbum con las canciones incluídas dentro de él.
+
+4.Introducción de más artistas.
+
 ```
 [Volver al índice](#índice)
 ## Conclusiones
