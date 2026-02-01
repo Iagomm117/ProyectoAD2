@@ -10,24 +10,18 @@
     - [Tabla Álbum](#tabla-álbum)
     - [Tabla Género](#tabla-género)
     - [Tabla Usuario](#tabla-usuario)
-<<<<<<< HEAD
-=======
     - [Tabla Podcast](#tabla-podcast)
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
   - [Estructura](#estructura)
   - [Metodología](#metodología)
   - [Configuracion de Ant](#configuración-de-ant)
   - [Ejecución del proyecto](#ejecución-del-proyecto)
   - [Manejo de errores](#manejo-de-errores)
 - [Manual de usuario](#manual-de-usuario)
-<<<<<<< HEAD
-  - [Registro](#registro)
+  - [Registro e Inicio de Sesión](#registro-e-inicio-de-sesión)
   - [Busquedas](#busquedas)
-=======
   - [Registro e Inicio de Sesión](#registro-e-inicio-de-sesión)
   - [Busquedas](#busquedas)
   - [Consultar información](#consultar-información)
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
   - [Otras opciones (Borrar y añadir canción)](#otras-opciones-borrar-y-añadir-canción)
 - [Reparto de tareas](#reparto-de-tareas)
 - [Mejoras](#mejoras)
@@ -52,17 +46,11 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 - **MySQL:** El proyecto utiliza MySQL como sistema de gestión de bases de datos,por lo que deberá estar instalado en el equipo para que el programa funcione
 
 ### Base de Datos. Modelo Entidad-Relación
-
-<<<<<<< HEAD
-#### Tabla Artistas
-=======
 <img width="1007" height="773" alt="image" src="https://github.com/user-attachments/assets/1bea624f-b5a8-4bb7-a405-d49817cc3121" />
 
-
-
 #### Tabla Artistas
 
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
 | Campo          | Tipo de dato | Descripción                                   |
 |----------------|--------------|-----------------------------------------------|             
 | ID             | INT (PK)     | Identificador único del artista               |
@@ -73,10 +61,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Genero         | VARCHAR(20)  | Género de música del artista                  |
 | Nacionalidad   | VARCHAR(20)  | País de origen                                |
 | Imagen         | VARCHAR(200) | Imagen del artista                            |
-<<<<<<< HEAD
-=======
-| Genero      | VARCHAR(20)     | Identificador del genero                      |
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
 
 #### Tabla Canción
 | Campo          | Tipo de dato | Descripción                          |
@@ -89,10 +74,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Artistas       | VARCHAR(130) | Artistas que participan en la canción|
 | Imagen         | VARCHAR(200) | Imagen de la canción                 |
 | Duración       | INT          | Duración total de la  canción        |
-<<<<<<< HEAD
-=======
-| ID_Genero      | VARCHAR(20)  | Identificador  del genero       |
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
 
 #### Tabla Álbum
 | Campo             | Tipo de dato  | Descripción                        |
@@ -106,10 +88,8 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Cantidad_Canciones| INT           | Cantidad de canciones del álbum    |
 | Imagen            | VARCHAR(200)  | Imagen del álbum                   |
 | Duración          | INT           | Duración total del álbum           |
-<<<<<<< HEAD
-=======
 | Genero            | VARCHAR(20)   | Identificador único del genero     |
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
 
 #### Tabla Género
 
@@ -122,13 +102,7 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Campo          | Tipo de dato | Descripción                     |
 |----------------|--------------|---------------------------------|
 | ID             | INT (PK)     | Identificador único del artista |
-<<<<<<< HEAD
-| Nombre         | VARCHAR(50) | Nombre de usuario               |
-| Contraseña     | VARCHAR(30)  | Contraseña del usuario          |
-| masReproducido | VARCHAR(30)  | Artista favorito                |
-
-=======
-| Nombre         | VARCHAR(50)  | Nombre de usuario               |
+| Nombre         | VARCHAR(50) | Nombre de usuario                |
 | Contraseña     | VARCHAR(30)  | Contraseña del usuario          |
 | masReproducido | VARCHAR(30)  | Artista favorito                |
 
@@ -141,19 +115,10 @@ También dejará tanto crear como borrar canciones al antojo del usuario.
 | Narradores     | varchar(130) | Reproducciones mensuales del artista          |
 | Genero         | VARCHAR(20)  | Género de música del artista                  |
 | Oyentes        | INT          | País de origen                                |
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
 
 ### Estructura
 El proyecto está planteado segun la estructura Modelo, Vista, Controlador.
 
-<<<<<<< HEAD
-#### Modelo
-
-#### Vista
-
-#### Controlador
-
-=======
 <img width="331" height="640" alt="image" src="https://github.com/user-attachments/assets/582d2cea-9adc-473d-b93c-732d43d88683" />
 
 
@@ -173,7 +138,7 @@ Y el controlador serviría para gestionar de manera eficiente todas estas vistas
 
 Aquí tendríamos la clase principal para ejecutar el programa y también la clase OperacionsDB para todas las consultas que le hicieramos a la base de datos
 
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
 ### Metodología
 
 #### Uso de Git
@@ -211,30 +176,23 @@ Gracias a este flujo de trabajo nos permite trabajar varios desarrolladores simu
   
   2.Asegurarse de de que el mysql-connector-j-8.1.0.jar este ya implementado en las librerias.
   
-<<<<<<< HEAD
   3.Ejecutar el método bien para poder iniciar la aplicación
-=======
-  3.Ejecutar el método *Main* para poder iniciar la aplicación
 
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
   ````
 ### Manejo de errores
 Para este proyecto hemos usado los try catch para controlar las posibles excepciones que puedan salir en el manejo de la aplicación.
 ## Manual de usuario
 [Volver al índice](#índice)
-<<<<<<< HEAD
-### Registro
-=======
+
 ### Registro e Inicio de Sesión:
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
 Al abrir la aplicación, el usuario en cuestión verá la siguiente pantalla :
 
 <img width="451" height="627" alt="image" src="https://github.com/user-attachments/assets/1b5af970-3170-4f08-8382-4949ee75a990" />
 
-En caso de que quieras iniciar sesión pero no puedas debido a que nombre/contraseña son incorrectos,aparecerá esto:
+En caso de que quieras iniciar sesión pero no puedas debido a que nombre/contraseña son incorrectos,aparecerá esto,y se pondrán en blanco los textfields:
 
 <img width="455" height="540" alt="image" src="https://github.com/user-attachments/assets/e2d1dfe9-232b-46c1-89ea-3b53730e6ccd" />
-
 
 Como no van las credenciales,le daremos al boton *Registrarse* para poder crear una cuenta:
 <img width="451" height="543" alt="image" src="https://github.com/user-attachments/assets/ac11330e-eac3-4469-9e5b-2d061dcf7461" />
@@ -263,26 +221,21 @@ Una vez que se validen los datos aparecerá esto:
 
 <img width="460" height="537" alt="image" src="https://github.com/user-attachments/assets/d38261c7-ed69-4460-a91c-60fbeb6b9b4a" />
 
-
-<<<<<<< HEAD
 Y a continuacion ya accederíamos a la pantalla principal:
 
 <img width="876" height="532" alt="image" src="https://github.com/user-attachments/assets/398a5dda-2c4e-433d-a2eb-040c67c28f8d" />
-=======
+
 Y a continuacion ya accederíamos a la pantalla principal, donde nos aparecerá por defecto marcado el artista favorito que escogimos en el registro:
 
 <img width="878" height="537" alt="image" src="https://github.com/user-attachments/assets/94f856bc-085f-4e9c-a9d6-f1a8fad1d05e" />
 
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
 
 
 ### Busquedas
 
-<<<<<<< HEAD
+
 ### Otras opciones (Borrar y añadir canción)
 
-## Reparto de tareas
-=======
 Una vez que estamos en la pantalla principal podremos acceder a las diferentes funcionalidades:
 
 La primera será la opción del filtro de búsqueda por artista, la cual no hace distinción de mayúsculas y minúsculas
@@ -402,22 +355,11 @@ Nico realizaría la parte gráfica de las interfaces junto a la gestión de usua
 
 En cuanto a Iago, se encargaría de la inserción de todos los datos, como de la descarga de la totalidad de las imágenes, y parte de las canciones, y se encargaría, en mayor parte que Nico en realizar la lógica del programa,crearía parte del script de creacón de las tablas, y por último, también crearía el modelo entidad-relación para insertar en el Readme.
 
-En cuanto a las horas trabajadas serían mas o menos las mismas ya que lo que no trabajamos en clase lo realizamos en llamada los dos, así que podrían  ser aproximadamente unas 35 horas aproximadamente.
-
-
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
 [Volver al índice](#índice)
 ## Mejoras
 En cuanto a posibles mejoras en un futuro comentamos las siguientes:
 ```
-<<<<<<< HEAD
-1.Introducción de información de podcasts.
 
-2.Búsqueda a tiempo real por tecla pulsada.
-```
-[Volver al índice](#índice)
-## Conclusiones
-=======
 1.Información sobre podcasts.
 
 2.Búsqueda a tiempo real por tecla pulsada.
@@ -430,7 +372,7 @@ En cuanto a posibles mejoras en un futuro comentamos las siguientes:
 [Volver al índice](#índice)
 ## Conclusiones
 
-En cuanto a las horas trabajadas serían mas o menos las mismas ya que lo que no trabajamos en clase lo realizamos en llamada los dos, así que podrían  ser aproximadamente unas 35 horas aproximadamente.
+En cuanto a las horas trabajadas serían mas o menos las mismas ya que lo que no trabajamos en clase lo realizamos en llamada los dos, así que podrían  ser aproximadamente unas 35 horas aproximadamente los dos.
 
 Consideramos que nuestro programa cumple con todos los requisitos que se solicitan, ya que conseguimos conectarnos a la BBDD de manera completamente satisfactoria. También nos permite tanto ver información detallada, como crear o eliminar registros.
 Para los usuarios utilizamos un un registro e inicio de sesion en el cual se guardan las acciones que vayan haciendo de manera individualizada
@@ -440,13 +382,10 @@ El acceso a las diferentes pantallas y la navegación entre ellas es fácil e in
 Con la creación de este proyecto hemos podido aprender a realizar consultas más complejas dentro de la base de datos para sacar información más detallada, como así también a manejar otro tipo de archivos como son los .mp3(para las canciones) o también la introducción de imágenes dentro de la BBDD.
 
 
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
 [Volver al índice](#índice)
 ## Autores
 
 Nicolás Sanjuás Casal [@nico](https://github.com/Nicosanju)  
-<<<<<<< HEAD
-Iago Mariño Mota @
-=======
 Iago Mariño Mota [@iago](https://github.com/Iagomm117)
->>>>>>> b6c33f8c0af1744c1d85b98a42748ad89c1fa32d
+
